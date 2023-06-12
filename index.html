@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Harcama Formu</title>
+  </head>
+  <body>
+    <h1>Aylık Gider Tablosu</h1>
+    <div class="content">
+      <div class="input-wrapper">
+        <input
+          id="gelir-giris"
+          required
+          placeholder="Gelirinizi giriniz (₺)"
+          type="text"
+        />
+        <button id="btn-ekle" class="ekle">Ekle</button>
+      </div>
+    </div>
+    <form>
+      <h2>Harcama Formu</h2>
+      <div class="container">
+        <div class="harcama-yer">
+          <label>Harcama yapılan yer</label>
+
+          <select name="harcama-turu" id="harcama-turu">
+            <option>Manav</option>
+            <option>Market</option>
+            <option>Fatura</option>
+            <option>Tekstil</option>
+          </select>
+        </div>
+        <div class="tarih">
+          <label>Tarih</label>
+          <input required type="date" />
+        </div>
+      </div>
+
+      <label>Harcanan Miktar</label>
+      <input id="harcama-giris" required type="number" />
+
+      <button id="kaydet">Kaydet</button>
+    </form>
+    <footer class="sonuc">
+      <table class="sonuc-table">
+        <thead class="sonuc-head">
+          <tr class="footer-col">
+            <td>Miktar</td>
+          </tr>
+          <tr class="footer-col">
+            <td>Harcanan Yer</td>
+          </tr>
+          <tr class="footer-col">
+            <td>Tarih</td>
+          </tr>
+          <tr class="footer-col">
+            <td></td>
+          </tr>
+        </thead>
+        <tbody id="sonuc-body"></tbody>
+      </table>
+    </footer>
+    <main class="last-table">
+      <div class="last-div">
+        <div>Geliriniz <input disabled id="gelir-total" /></div>
+        <div>Gideriniz <input disabled id="gider-total" /></div>
+        <div>Kalan</div>
+        <input disabled id="kalan" />
+      </div>
+    </main>
+    <button id="reset-btn">Bilgileri Temizle</button>
+    <script src="index.js"></script>
+  </body>
+</html>
